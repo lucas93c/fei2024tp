@@ -19,7 +19,10 @@ services:
       context: ./config/django-image
     volumes:
       - ./backend/django:/usr/src/app:delegated
-    environment:      
+    environment:
+      DATABASE_PASS: ${DATABASE_PASS}
+      DATABASE_USER: ${DATABASE_USER}
+      DATABASE_NAME: ${DATABASE_NAME}      
       DJANGO_SU_NAME: ${DJANGO_SU_NAME}
       DJANGO_SU_PASSWORD: ${DJANGO_SU_PASSWORD}
       DJANGO_SU_EMAIL: ${DJANGO_SU_EMAIL}
