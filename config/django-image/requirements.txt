@@ -1,0 +1,6 @@
+Django
+django-rest-auth
+djangorestframework
+djangorestframework-jwt
+psycopg
+djangorestframework-simplejwt

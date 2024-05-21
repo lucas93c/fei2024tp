@@ -13,5 +13,20 @@ services:
     networks:
       red:
 
+  django:
+    image: aulas2024tp:0.1
+    build:
+      context: ./config/django-image
+    volumes:
+      - ./backend/django:/usr/src/app:delegated
+    environment:      
+      DJANGO_SU_NAME: ${DJANGO_SU_NAME}
+      DJANGO_SU_PASSWORD: ${DJANGO_SU_PASSWORD}
+      DJANGO_SU_EMAIL: ${DJANGO_SU_EMAIL}
+    ports:
+      - 8000:8000
+    networks:
+      red:
+
 networks:
   red:
