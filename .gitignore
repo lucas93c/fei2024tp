@@ -1,0 +1,3 @@
+data/dbdata/
+.env
+.env-dist
