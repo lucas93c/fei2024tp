@@ -31,5 +31,13 @@ services:
     networks:
       red:
 
+  adminer:
+    image: adminer:latest
+    ports:
+      - 8080:8080
+    networks:
+      - red
+
+
 networks:
   red:
